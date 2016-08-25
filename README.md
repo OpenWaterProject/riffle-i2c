@@ -38,9 +38,3 @@ The Arduino code [riffle_thermistor.ino] in this repository will measure tempera
 The data is output in "TSV" format, with tabs separating columns of data (timestamp in the first column, RTC temperature in the second column, thermistor temperature in the third column).
 
 
-
-
-
-<img src="pics/i2c_schem_graphic.png">
-
-<img src="pics/i2c_proto.png">
