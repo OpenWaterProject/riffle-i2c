@@ -2,9 +2,11 @@
 
 <img src="pics/i2c_bare.png" width = 200>
 
+**Note**: If this is your first time programming a Riffle, you'll probably want to check out the [Riffle: Getting Started instructions](https://github.com/dwblair/Riffle-Getting-Started), which will show you how to set up the Arduino IDE and the Riffle for programming and datalogging.
+
 ## i2c basics
 
-[i2c](https://en.wikipedia.org/wiki/I%C2%B2C) refers to a particular electronic communications protocol that can be used by microntrollers like the Arduino and the Riffle.  It is a "bus" system that allows more than one device to communicate at once, through the use of an addressing system.  
+[i2c](https://en.wikipedia.org/wiki/I%C2%B2C) refers to a particular electronic communications protocol that can be used by microntrollers like the Arduino and the Riffle.  It is a "bus" system that allows more than one device to communicate at once, through the use of an addressing system. 
 
 This means that, for example, an i2c temperature sensor and an i2c light detector can both be connected to the i2c bus lines on the Riffle, and they can be polled for their sensor values without interfering with one another.
 
@@ -20,7 +22,7 @@ To connect the Riffle to a 3.3V i2c sensor, you must power the sensor (provide i
 
 ## i2c temp and pressure sensor example
 
-As an example, we'll be setting up a [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) i2c sensor.  
+As an example, we'll be setting up a [BMP180](https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf) i2c sensor. 
 
 The BMP180 is a popular, inexpensive chip that is sold as a breakout board by hobby electronics companies like Adafruit and Sparkfun.  It will accept up to 5V, but can be powered by 3V, which is ideal for the Riffle (which runs at 3.3V).
 
@@ -50,9 +52,17 @@ Below is a picture of an i2c sensor connected to the Riffle protoboard.  Take sp
 
 ## Code for i2c Temperature Sensor Datalogging with a Riffle
 
-The Arduino code [riffle_bmp180.ino] in this repository will measure temperature and pressure using the Riffle, and record it to a microSD card. 
+The Arduino code "riffle_bmp180.ino" in this repository will measure temperature using a bmp180 breakout board set up as in the above schematic, and record it to a microSD card along with a timestamp. 
 
-The data is output in "TSV" format, with tabs separating columns of data (timestamp in the first column, RTC temperature in the second column, thermistor temperature in the third column).
+1. Download this entire repository using the button on this page above (or [this link](https://github.com/dwblair/riffle-i2c/archive/master.zip) should work).  
+
+2. Copy all of the libraries labeled in the "libraries" folder to the "libraries" folder in your Arduino IDE "sketchbook" folder.
+
+3. Then, upload the "riffle_bmp180.ino" code onto the Riffle, choosing "Arduino UNO" as the board type. 
+
+This code will start measuring temperature the BMP180 sensor.  
+ 
+The data is output in "TSV" format, with tabs separating columns of data (timestamp in the first column, thermistor in the third column).
 
 
 
