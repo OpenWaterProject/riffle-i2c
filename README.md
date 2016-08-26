@@ -1,6 +1,6 @@
 # Measuring temperature using an i2c temperature sensor using a Riffle
 
-<img src="pics/i2c_bare.png">
+<img src="pics/i2c_bare.png" width = 200>
 
 ## i2c basics
 
