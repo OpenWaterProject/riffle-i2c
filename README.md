@@ -40,6 +40,10 @@ As noted above, we simply need to connect the PWR, GND, SCL, and SDA lines direc
 
 ## i2c Sensor connected to a Riffle Protoboard
 
+The Riffle protoboard connects to the end of the Riffle, making it easier to connect sensor wires to the Riffle in a secure fashion:
+
+<img src = "pics/proto.png">
+
 Below is a picture of an i2c sensor connected to the Riffle protoboard.  Take special care to connect wires to the appropriate rows and columns in order to achieve the proper electrical connectivity. 
 
 <img src="pics/i2c_proto.png">
