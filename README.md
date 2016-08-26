@@ -1,5 +1,7 @@
 # Measuring temperature using an i2c temperature sensor using a Riffle
 
+<img src="pics/i2c_bare.png">
+
 ## i2c basics
 
 [i2c](https://en.wikipedia.org/wiki/I%C2%B2C) refers to a particular electronic communications protocol that can be used by microntrollers like the Arduino and the Riffle.  It is a "bus" system that allows more than one device to communicate at once, through the use of an addressing system.  
